@@ -1,228 +1,493 @@
-# 🏦 TrustCore Digital Bank
+🏦 TrustCore Digital Bank
+Enterprise-Grade Secure Digital Banking Platform
 
-**Enterprise-Grade AI-Powered Banking Platform**
+TrustCore is a production-style enterprise banking platform designed using real-world fintech architecture patterns. The system simulates a modern digital bank with secure transaction processing, microservices architecture, AI-driven fraud detection, and enterprise-grade infrastructure.
 
-TrustCore is a full-stack digital banking system designed with enterprise architecture principles, security best practices, and scalable infrastructure. This project simulates a real-world fintech platform with customer banking features, administrative controls, and AI-driven fraud detection.
-
----
-
-## 🚀 Project Purpose
-This application demonstrates how modern banking platforms are built using:
-
-- Microservices architecture
-- Secure authentication systems
-- Financial transaction processing
-- AI-driven analytics
-- Production-ready infrastructure
-
-It is designed as a **portfolio-level enterprise project** for learning, demonstration, and system design practice.
-
----
-
-## 👥 User Roles
-
-### Customers
-- Account dashboard
-- Transfer funds
-- View transactions
-- Spending analytics
-- AI financial assistant
-- Secure login with MFA
-
-### Bank Staff (Admin Panel)
-- Fraud monitoring dashboard
-- Audit logs
-- User verification tools
-- Risk alerts
-- Role management
-
----
-
-## 🧱 Architecture Overview
-
-
-Client (Next.js)
-
-↓
-
-API Gateway (NGINX)
-
-↓
-
-Backend Services
-
-├── Auth Service (Spring Boot)
-
-├── Banking Core (Spring Boot)
-
-├── AI Engine (Python FastAPI)
-
-└── Audit Service
-
-↓
-
-Databases
-
-├── PostgreSQL
-
-├── Redis
-
-└── Elasticsearch
-
-
----
-
-## 🛠 Tech Stack
-
-### Frontend
-- Next.js
-- TypeScript
-- TailwindCSS
-- Chart.js
-
-### Backend
-- Java Spring Boot
-- Python FastAPI (AI engine)
-
-### Database
-- PostgreSQL
-- Redis
-- Elasticsearch
-
-### Security
-- JWT authentication
-- OAuth2
-- Rate limiting
-- Encryption (AES + TLS)
-
-### DevOps
-- Docker
-- Kubernetes
-- GitHub Actions CI/CD
-- NGINX gateway
-
-### Cloud (Recommended Deployment)
-- AWS RDS
-- AWS S3
-- AWS Secrets Manager
-- CloudWatch Monitoring
-
----
-
-## 🤖 AI Fraud Detection Engine
-
-The AI microservice analyzes transaction patterns to detect anomalies.
-
-Capabilities:
-- Suspicious transaction detection
-- Spending behavior analysis
-- Risk scoring
-- Predictive alerts
-
----
-
-## 📁 Project Structure
-
-
-trustcore-bank/
-│
-
-├── frontend/
-
-├── backend/
-
-│ ├── auth-service/
-
-│ ├── banking-service/
-
-│ ├── audit-service/
-
-│ └── ai-engine/
-│
-
-├── infrastructure/
-
-│ ├── docker/
-
-│ ├── k8s/
-
-│ └── nginx/
-│
-
-├── docs/
-
-└── README.md
-
-
----
-
-## 🔐 Security Design Principles
-
-- Zero trust architecture
-- Least privilege access
-- Secure secrets management
-- Full audit logging
-- Input validation everywhere
-- API rate limiting
-- Encrypted sensitive data
-
----
-
-## ⚙️ Setup Instructions (Development)
-
-### 1 — Clone Repo
-```bash
-git clone https://github.com/yourname/trustcore-bank.git
-cd trustcore-bank
-2 — Start Services
-docker-compose up --build
-3 — Run Frontend
-cd frontend
-npm install
-npm run dev
-
-
-🧪 Testing
-
-Run backend tests:
-
-./mvnw test
-
-Run AI service tests:
-
-pytest
-
-
-📊 Future Enhancements
-
-Mobile app version
-
-Real bank API integration
-
-Blockchain audit ledger
-
-Voice banking assistant
-
-Machine learning credit scoring
-
-🎯 Learning Goals
-
-This project teaches:
-
-Enterprise backend architecture
+This project demonstrates how real financial systems are engineered, focusing on:
 
 Secure system design
 
-Microservices communication
+Financial transaction integrity
 
-Financial data modeling
+Microservices architecture
+
+Enterprise Java development
+
+AI service integration
 
 Production deployment strategy
 
-📜 License
+TrustCore is designed as a portfolio-quality enterprise banking system representing realistic fintech engineering practices.
 
-MIT License — free to use and modify.
+Executive Overview
 
-👨‍💻 Author
+TrustCore models the architecture of modern digital banking platforms used by financial institutions and fintech companies.
+
+The system supports:
+
+Customer Banking
+
+Secure authentication with JWT
+
+Multi-account management
+
+Funds transfers
+
+Transaction history
+
+Spending analytics
+
+AI-powered risk analysis
+
+Bank Operations
+
+Fraud monitoring dashboards
+
+Risk alerts
+
+Full audit logging
+
+User role management
+
+Administrative controls
+
+System Architecture
+
+TrustCore follows a service-oriented microservices architecture with strict service boundaries.
+
+Client (Next.js)
+
+      ↓ HTTPS
+
+NGINX API Gateway
+
+      ↓
+
+Microservices
+
+Auth Service (Spring Boot)
+Banking Service (Spring Boot)
+Audit Service (Spring Boot)
+AI Engine (FastAPI)
+
+      ↓
+
+Data Layer
+
+PostgreSQL
+Redis
+Elasticsearch
+Architecture Principles
+
+TrustCore was designed using enterprise software architecture principles.
+
+Clean Service Boundaries
+
+Each microservice owns its data and domain logic:
+
+Service	Responsibility
+Auth Service	Identity + Access Management
+Banking Service	Financial transaction processing
+Audit Service	Compliance logging
+AI Engine	Risk analysis
+Financial Transaction Integrity
+
+The banking service enforces:
+
+ACID database transactions
+
+Balance validation
+
+Transaction atomicity
+
+Consistency checks
+
+Failure rollbacks
+
+This ensures financial correctness similar to real banking systems.
+
+Security-First Design
+
+TrustCore follows a defense-in-depth security model.
+
+Security features include:
+
+JWT authentication
+
+Refresh tokens
+
+Role-based access control
+
+Password hashing (bcrypt)
+
+TLS-ready configuration
+
+Input validation
+
+Rate limiting
+
+Audit logging
+
+Designed with guidance from:
+
+OWASP Top 10
+
+PCI-DSS principles
+
+SOC2 architecture practices
+
+Technology Stack
+Frontend
+
+Next.js
+
+TypeScript
+
+TailwindCSS
+
+Chart.js
+
+Backend
+Core Services
+
+Spring Boot microservices:
+
+Auth Service
+
+Banking Service
+
+Audit Service
+
+Features:
+
+REST APIs
+
+JPA persistence
+
+Transaction management
+
+Validation
+
+Structured logging
+
+AI Engine
+
+Python FastAPI microservice.
+
+Capabilities:
+
+Transaction risk scoring
+
+Anomaly detection
+
+Behavior modeling
+
+Initial models:
+
+Statistical anomaly detection
+
+Isolation Forest (planned)
+
+Data Layer
+PostgreSQL
+
+Primary relational database:
+
+Tables include:
+
+users
+
+accounts
+
+transactions
+
+audit_logs
+
+refresh_tokens
+
+risk_alerts
+
+Redis
+
+Used for:
+
+Session caching
+
+Rate limiting
+
+Temporary data
+
+Elasticsearch
+
+Used for:
+
+Audit log search
+
+Transaction search
+
+Fraud analytics
+
+Infrastructure
+Containerization
+
+Docker-based development environment.
+
+Services:
+
+PostgreSQL
+
+Redis
+
+Elasticsearch
+
+NGINX gateway
+
+docker compose up -d
+API Gateway
+
+NGINX provides:
+
+Central routing
+
+TLS termination
+
+Request filtering
+
+Rate limiting
+
+Security headers
+
+Routes:
+
+/auth → Auth Service
+/api → Banking Service
+/audit → Audit Service
+/ai → AI Engine
+Cloud Deployment Strategy
+
+Designed for AWS deployment.
+
+Target architecture:
+
+AWS RDS (PostgreSQL)
+
+AWS EC2 / EKS
+
+AWS S3
+
+AWS Secrets Manager
+
+CloudWatch Monitoring
+
+Repository Structure
+trustcore-bank/
+
+frontend/
+
+backend/
+
+auth-service/
+banking-service/
+audit-service/
+ai-engine/
+
+infrastructure/
+
+docker/
+nginx/
+k8s/
+
+docs/
+
+docker-compose.yml
+README.md
+Development Roadmap
+
+TrustCore is built in three enterprise phases.
+
+Total commits: ~30
+
+Development style:
+
+Small pull requests
+
+Incremental delivery
+
+Production-style commits
+
+Primary IDE:
+
+IntelliJ IDEA
+
+Phase 1 — Platform Foundation
+Objective
+
+Establish a runnable microservices platform.
+
+Components
+
+Project structure
+
+Docker infrastructure
+
+PostgreSQL
+
+Redis
+
+Elasticsearch
+
+NGINX gateway
+
+Spring Boot services
+
+FastAPI service
+
+Next.js frontend
+
+Result
+
+Entire system boots locally.
+
+docker compose up -d
+Phase 2 — Secure Banking MVP
+Objective
+
+Implement secure banking functionality.
+
+Features
+
+Authentication:
+
+Register users
+
+Login
+
+JWT tokens
+
+Refresh tokens
+
+Roles
+
+Banking:
+
+Accounts
+
+Transfers
+
+Transaction history
+
+Frontend:
+
+Login UI
+
+Dashboard
+
+Transfers
+
+Result
+
+End-to-end banking workflow:
+
+Register → Login → Transfer → View Transactions
+
+Phase 3 — Enterprise Controls + AI
+Objective
+
+Introduce enterprise capabilities.
+
+Features
+
+Audit System:
+
+Compliance logging
+
+Event search
+
+AI Engine:
+
+Transaction risk scoring
+
+Fraud detection
+
+Admin Panel:
+
+Risk alerts
+
+Audit logs
+
+Result
+
+Enterprise banking simulation with fraud monitoring.
+
+Running Locally
+Start Infrastructure
+docker compose up -d
+Run Spring Boot Services
+
+Open in IntelliJ:
+
+backend/auth-service
+backend/banking-service
+backend/audit-service
+
+Run each service.
+
+Ports:
+
+8081
+8082
+8083
+Run AI Engine
+cd backend/ai-engine
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+pip install -r requirements.txt
+
+uvicorn main:app --reload --port 8084
+Run Frontend
+cd frontend
+
+npm install
+
+npm run dev
+Testing
+
+Spring Boot:
+
+./mvnw test
+
+AI Engine:
+
+pytest
+Engineering Highlights
+
+TrustCore demonstrates:
+
+✔ Enterprise Java microservices
+✔ Secure authentication design
+✔ Financial transaction modeling
+✔ AI microservice integration
+✔ Production-style architecture
+✔ Containerized infrastructure
+✔ Cloud-ready deployment
+
+Future Roadmap
+
+Kubernetes production deployment
+
+Mobile banking app
+
+Credit scoring models
+
+Real bank API integration
+
+Event-driven architecture
+
+Distributed tracing
+
+Author
 
 Eric Cheyne
