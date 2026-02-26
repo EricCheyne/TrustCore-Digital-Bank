@@ -42,18 +42,31 @@ It is designed as a **portfolio-level enterprise project** for learning, demonst
 
 
 Client (Next.js)
+
 ↓
+
 API Gateway (NGINX)
+
 ↓
+
 Backend Services
+
 ├── Auth Service (Spring Boot)
+
 ├── Banking Core (Spring Boot)
+
 ├── AI Engine (Python FastAPI)
+
 └── Audit Service
+
 ↓
+
 Databases
+
 ├── PostgreSQL
+
 ├── Redis
+
 └── Elasticsearch
 
 
@@ -113,19 +126,31 @@ Capabilities:
 
 trustcore-bank/
 │
+
 ├── frontend/
+
 ├── backend/
+
 │ ├── auth-service/
+
 │ ├── banking-service/
+
 │ ├── audit-service/
+
 │ └── ai-engine/
 │
+
 ├── infrastructure/
+
 │ ├── docker/
+
 │ ├── k8s/
+
 │ └── nginx/
 │
+
 ├── docs/
+
 └── README.md
 
 
