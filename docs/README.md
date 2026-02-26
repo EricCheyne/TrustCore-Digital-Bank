@@ -1,11 +1,12 @@
 🏦 TrustCore Digital Bank
-Enterprise-Grade Secure Digital Banking Platform
+
+## Enterprise-Grade Secure Digital Banking Platform
 
 TrustCore is a production-style enterprise banking platform designed using real-world fintech architecture patterns. The system simulates a modern digital bank with secure transaction processing, microservices architecture, AI-driven fraud detection, and enterprise-grade infrastructure.
 
 This project demonstrates how real financial systems are engineered, focusing on:
 
-Secure system design
+## Secure system design
 
 Financial transaction integrity
 
@@ -15,15 +16,15 @@ Enterprise Java development
 
 AI service integration
 
-Production deployment strategy
+## Production deployment strategy
 
 TrustCore is designed as a portfolio-quality enterprise banking system representing realistic fintech engineering practices.
 
-Executive Overview
+## Executive Overview
 
 TrustCore models the architecture of modern digital banking platforms used by financial institutions and fintech companies.
 
-The system supports:
+## The system supports:
 
 Customer Banking
 
@@ -51,7 +52,7 @@ User role management
 
 Administrative controls
 
-System Architecture
+## System Architecture
 
 TrustCore follows a service-oriented microservices architecture with strict service boundaries.
 
@@ -267,7 +268,7 @@ Cloud Deployment Strategy
 
 Designed for AWS deployment.
 
-Target architecture:
+## Target architecture:
 
 AWS RDS (PostgreSQL)
 
@@ -307,7 +308,7 @@ TrustCore is built in three enterprise phases.
 
 Total commits: ~30
 
-Development style:
+## Development style:
 
 Small pull requests
 
@@ -315,11 +316,11 @@ Incremental delivery
 
 Production-style commits
 
-Primary IDE:
+## Primary IDE:
 
 IntelliJ IDEA
 
-Phase 1 — Platform Foundation
+## Phase 1 — Platform Foundation
 Objective
 
 Establish a runnable microservices platform.
@@ -349,7 +350,8 @@ Result
 Entire system boots locally.
 
 docker compose up -d
-Phase 2 — Secure Banking MVP
+
+## Phase 2 — Secure Banking MVP
 Objective
 
 Implement secure banking functionality.
@@ -390,7 +392,7 @@ End-to-end banking workflow:
 
 Register → Login → Transfer → View Transactions
 
-Phase 3 — Enterprise Controls + AI
+## Phase 3 — Enterprise Controls + AI
 Objective
 
 Introduce enterprise capabilities.
@@ -419,7 +421,7 @@ Result
 
 Enterprise banking simulation with fraud monitoring.
 
-Running Locally
+## Running Locally
 Start Infrastructure
 docker compose up -d
 Run Spring Boot Services
@@ -474,7 +476,7 @@ TrustCore demonstrates:
 ✔ Containerized infrastructure
 ✔ Cloud-ready deployment
 
-Future Roadmap
+## Future Roadmap
 
 Kubernetes production deployment
 
@@ -488,6 +490,6 @@ Event-driven architecture
 
 Distributed tracing
 
-Author
+## Author
 
 Eric Cheyne
