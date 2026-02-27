@@ -1,17 +1,21 @@
-import React from 'react';
+import Navbar from '../components/Navbar';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1>TrustCore Digital Bank</h1>
-      <p>Welcome to the future of secure banking.</p>
-      <div style={{ marginTop: '2rem' }}>
-        <h3>Phase 1: Platform Foundation</h3>
-        <ul>
-          <li>Next.js Frontend: RUNNING</li>
-          <li>Spring Boot Services: CONNECTED</li>
-          <li>FastAPI AI Engine: CONNECTED</li>
-        </ul>
+    <div>
+      <Navbar />
+      <div style={{ padding: '50px', textAlign: 'center' }}>
+        <h1>Welcome to TrustCore Digital Bank</h1>
+        <p>Your secure and modern banking platform.</p>
+        <div style={{ marginTop: '20px' }}>
+          <Link href="/register" style={{ padding: '10px 20px', background: '#0070f3', color: 'white', textDecoration: 'none', borderRadius: '4px', marginRight: '10px' }}>
+            Get Started
+          </Link>
+          <Link href="/login" style={{ padding: '10px 20px', background: '#333', color: 'white', textDecoration: 'none', borderRadius: '4px' }}>
+            Login
+          </Link>
+        </div>
       </div>
     </div>
   );
