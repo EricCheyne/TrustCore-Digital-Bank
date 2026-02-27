@@ -53,7 +53,7 @@ export default function RiskAlerts() {
             </div>
             <div className="bg-white shadow rounded p-4">
               <div className="text-sm text-gray-500">Blocking Policy</div>
-              <div className="text-md font-medium">Risk score > 0.7</div>
+              <div className="text-md font-medium">Risk score &gt; 0.7</div>
             </div>
           </div>
 
