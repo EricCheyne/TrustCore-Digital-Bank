@@ -22,11 +22,11 @@ export default function LoginPage() {
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '10px' }}>
-          <label>Username</label><br/>
+          <label>Username</label><br />
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required style={{ width: '100%' }} />
         </div>
         <div style={{ marginBottom: '10px' }}>
-          <label>Password</label><br/>
+          <label>Password</label><br />
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required style={{ width: '100%' }} />
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
