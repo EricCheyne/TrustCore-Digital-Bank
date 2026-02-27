@@ -49,9 +49,11 @@ services:
   audit-service:
     build: ./backend/audit-service
     depends_on:
-      - elasticsearch
+      - postgres
     environment:
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/trustcore
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=password
 
   ai-engine:
     build: ./backend/ai-engine
@@ -62,7 +64,7 @@ services:
   frontend:
     build: ./frontend
     environment:
-      - NEXT_PUBLIC_API_URL=/api
+      - NEXT_PUBLIC_API_URL=
 
   # Gateway
   nginx-gateway:

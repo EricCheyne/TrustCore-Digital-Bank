@@ -15,13 +15,23 @@ export default function TransactionHistoryPage() {
     if (user && accountNumber) {
       api.get(`/banking/api/v1/banking/accounts/${accountNumber}/transactions`)
         .then(res => setTransactions(res.data))
-        .catch(console.error)
+        .catch(err => {
+          console.error(err);
+          setLoading(false);
+        })
         .finally(() => setLoading(false));
+    } else if (!user) {
+      setLoading(false);
     }
   }, [user, accountNumber]);
 
-  if (!user) return <p>Please login.</p>;
-  if (loading) return <p>Loading transactions...</p>;
+  if (!user && !loading) return (
+    <div>
+      <Navbar />
+      <p style={{ padding: '20px' }}>Please login.</p>
+    </div>
+  );
+  if (loading) return <p style={{ padding: '20px' }}>Loading transactions...</p>;
 
   return (
     <div>

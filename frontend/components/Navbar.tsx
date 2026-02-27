@@ -11,7 +11,9 @@ export default function Navbar() {
         {user && (
           <>
             <Link href="/dashboard" style={{ color: 'white', marginRight: '15px', textDecoration: 'none' }}>Dashboard</Link>
-            <Link href="/transfer" style={{ color: 'white', textDecoration: 'none' }}>Transfer</Link>
+            <Link href="/transfer" style={{ color: 'white', marginRight: '15px', textDecoration: 'none' }}>Transfer</Link>
+            <Link href="/admin/audit" style={{ color: 'white', marginRight: '15px', textDecoration: 'none' }}>Audit Logs</Link>
+            <Link href="/admin/risk" style={{ color: 'white', textDecoration: 'none' }}>Risk Alerts</Link>
           </>
         )}
       </div>
